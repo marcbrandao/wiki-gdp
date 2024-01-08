@@ -41,3 +41,10 @@
         # [Missing Data] Cuba: no tables at all in the page
         # [Missing Data] Kenya: no compatible table for IMF data
         # [Missing Data] Oman: data only available for each 5 years (2010, 2015, 2020...)
+
+    # List of Countries:
+        # https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)
+        # https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP) (alternative - non-optimal - full of non-country items such as territories, continents, etc).
+
+        # Additional data (US$Nom): https://en.wikipedia.org/wiki/List_of_countries_by_past_and_projected_GDP_(nominal)
+        # Additional data (US$PPP): https://en.wikipedia.org/wiki/List_of_countries_by_past_and_projected_GDP_(PPP)
