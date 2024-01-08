@@ -48,3 +48,5 @@
 
         # Additional data (US$Nom): https://en.wikipedia.org/wiki/List_of_countries_by_past_and_projected_GDP_(nominal)
         # Additional data (US$PPP): https://en.wikipedia.org/wiki/List_of_countries_by_past_and_projected_GDP_(PPP)
+
+        # Additional data (IMF original source - checker): https://www.imf.org/en/Publications/WEO/Issues/2023/10/10/world-economic-outlook-october-2023#data-tools
