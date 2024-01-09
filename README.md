@@ -12,16 +12,16 @@
                 # Created a rows cells table composed of any th cells if they are classified as such instead of as td.
 
 
-    # [Partially Resolved]: Missing or incomplete data issues:
-        # Russia only has values 1992-2021 (will be a problem depending on timeframe analyzed)
+    # [Partially Available]: Missing or incomplete data issues:
+        # Russia only has values 1992-2021
         # Denmark: only has up to 2017
         # South Africa only has up to 2022
-        # Vietnam: only has partial years
-        # Czech Republic: only has 2015-2020, almost totally missing
+        # Vietnam: only has some  years
+        # Czech Republic: only has 2015-2020
+        # To be completed . . . 
         
     
     # [Solvable Missing Data]: issues regarding missing or incomplete data [50:70]
-        # Finland only has Nominal, PPP is in EUR.
 
         
     # [Non-solvable]: fully missing data issues
