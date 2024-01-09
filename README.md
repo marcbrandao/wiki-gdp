@@ -20,27 +20,17 @@
         # Czech Republic: only has 2015-2020, almost totally missing
         
     
-    # [Solvable Missing Data]: issues regarding missing or incomplete data [50:60]
-        # Kazakhstan only has PPP
-        # Qatar only has PPP
-        # Algeria only has PPP
-        # Hungary only has PPP
-        # Qatar only has PPP
-        # Ethiopia only has PPP
+    # [Solvable Missing Data]: issues regarding missing or incomplete data [50:70]
         # Finland only has Nominal, PPP is in EUR.
 
         
-    # Solvable issues [From 60 to 70]
-        #[Solvable Missing Data] Morroco only has PPP
-
-        
-    # Non-solvable missing data issues
-        # [Missing Data] Iraq: no tables at all in the page
-        # [Missing Data] Kuwait: no compatible table for IMF data
-        # [Missing Data] Slovakia: no compatible table for IMF data
-        # [Missing Data] Cuba: no tables at all in the page
-        # [Missing Data] Kenya: no compatible table for IMF data
-        # [Missing Data] Oman: data only available for each 5 years (2010, 2015, 2020...)
+    # [Non-solvable]: fully missing data issues
+        # Iraq: no tables at all in the page
+        # Kuwait: no compatible table for IMF data
+        # Slovakia: no compatible table for IMF data
+        # Cuba: no tables at all in the page
+        # Kenya: no compatible table for IMF data
+        # Oman: data only available for each 5 years (2010, 2015, 2020...)
 
     # List of Countries:
         # https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)
