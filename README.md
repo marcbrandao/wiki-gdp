@@ -1,5 +1,5 @@
 # wiki-gdp
-# Last Checkpoint: 23:14 BRT 7 Jan - Notes for the whole slice [:60]
+# Last Checkpoint: 7AM BRT 9 Jan - Notes for the whole slice [:60]
 
     # [Corrected and Resolved]:
         # Switzerland had US$ nominal instead of US$nominal UPDATE: corrected by including variation in the code
@@ -29,8 +29,8 @@
         # Kuwait: no compatible table for IMF data
         # Slovakia: no compatible table for IMF data
         # Cuba: no tables at all in the page
-        # Kenya: no compatible table for IMF data
-        # Oman: data only available for each 5 years (2010, 2015, 2020...)
+        # Kenya: no compatible table for IMF data - data only available for each 5 years (2010, 2015, 2020...)
+        # Oman: no compatible table for IMF data - data only available for each 5 years (2010, 2015, 2020...)
 
     # List of Countries:
         # https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)
