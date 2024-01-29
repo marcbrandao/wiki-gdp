@@ -183,7 +183,8 @@ stop_profile()
 absent_list = sorted(absent_countries)
 
 # Print the list showing which countries are absent.        
-print(f'There are {len(absent_list)} countries without a GDP table: \n {absent_list} \n')        
+print(f'There are {len(absent_list)} countries without a GDP table: \n {absent_list} \n')  
+time_sleep(1)
         
 
 
@@ -225,6 +226,7 @@ for col in filtered_growth_df.columns:
 
 
 print("Tables generated: filtered_df and filtered_growth_df objects available. \n")
+time.sleep(1)
 
 # Get user input regarding which table they want to see
 table_type = input('Select the table you would like to see\n 1. GDP volume \n 2. GDP Growth Rate \n \n')
