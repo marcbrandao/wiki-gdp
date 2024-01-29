@@ -19,9 +19,11 @@ HEADERS = {
  'Content-Type': 'application/json'
  }
 
+
 #TODO: Insert your account information in both variables below.
 USERNAME = input("Insert your MLX email: ")
 PASSWORD = getpass("Insert your MLX password: ")
+
 
 #TODO: Insert the Folder ID and the Profile ID below 
 FOLDER_ID = input("Insert the desired folder ID: ")
@@ -30,7 +32,6 @@ PROFILE_ID = input("Insert the desired profile ID: ")
 
 # Function to sign into the application and get the token
 def signin() -> str:
-
     payload = {
         'email': USERNAME,
         'password': hashlib.md5(PASSWORD.encode()).hexdigest()
@@ -40,7 +41,6 @@ def signin() -> str:
 
     if(r.status_code != 200):
         print(f'\nError during login: {r.text}\n')
-        
     else:
         response = r.json()['data']
         token = response['token']
@@ -48,10 +48,8 @@ def signin() -> str:
     return token
 
 
-
 # Function to start the Webdriver through MLX profile (API Request)
 def start_profile() -> webdriver:
-
     r = requests.get(f'{MLX_LAUNCHER}/profile/f/{FOLDER_ID}/p/{PROFILE_ID}/start?automation_type=selenium', headers=HEADERS)
     response = r.json()
 
@@ -65,11 +63,11 @@ def start_profile() -> webdriver:
 
     return driver
  
-    
+
 # Function to stop the profile when closing Driver
 def stop_profile() -> None:
     r = requests.get(f'{MLX_LAUNCHER}/profile/stop/p/{PROFILE_ID}', headers=HEADERS)
-
+ 
     if(r.status_code != 200):
         print(f'\nError while stopping profile: {r.text}\n')
     else:
@@ -79,8 +77,6 @@ def stop_profile() -> None:
 #Get the token
 token = signin()
 HEADERS.update({"Authorization": f'Bearer {token}'})
-
-
 
 # Set up Selenium WebDriver through MLX Selenium Automation
 driver = start_profile()
@@ -187,8 +183,6 @@ print(f'There are {len(absent_list)} countries without a GDP table: \n {absent_l
 time_sleep(1)
         
 
-
-
 ### POST SCRAPING MANIPULATIONS ###
 
 # Viewing option: only .1 decimal
@@ -197,9 +191,9 @@ pd.set_option('display.float_format', '{:.1f}'.format)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', 250)
 
+
 # Transforming the gross GDP data into a DataFrame
 final_df = pd.DataFrame(combined_gdp_data) #Transpose if you wish (useful for checking countries)
-
 
 
 # Calculate the GDP growth percentage data based on the previous year
@@ -224,12 +218,13 @@ for col in filtered_growth_df.columns:
     filtered_growth_df[col] = pd.to_numeric(filtered_growth_df[col], errors='coerce')
     
 
-
 print("Tables generated: filtered_df and filtered_growth_df objects available. \n")
 time.sleep(1)
 
+
 # Get user input regarding which table they want to see
 table_type = input('Select the table you would like to see\n 1. GDP volume \n 2. GDP Growth Rate \n \n')
+
 
 # Create a function to display the filtered GDP data
 def display_df(table_type):
@@ -239,6 +234,7 @@ def display_df(table_type):
         return filtered_growth_df
     else:
         print(f'Wrong option!')
+
 
 #Display the chosen table type
 selected_df = display_df(table_type).sort_values(by=[str(int(current_year) - 1)], ascending=False)
