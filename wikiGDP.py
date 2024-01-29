@@ -108,7 +108,7 @@ combined_gdp_data = {}
 absent_countries = []
 
 # Iterate over each country's URL
-for country_name, url in country_urls[:15]:
+for country_name, url in country_urls:
     # Navigate to the country's page
     driver.get(url)
     # Wait for page to load table
