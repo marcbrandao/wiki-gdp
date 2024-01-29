@@ -1,6 +1,12 @@
 # wiki-gdp
 # Last Checkpoint: 00AM BRT 29 Jan 
 
+
+[UPDATE 30/JAN]:
+- Running in Jupyter, VS Code, PyCharm and CMD smoothly.
+- Tested in 3 different machines already.
+
+
 [UPDATE 29/JAN]
 **Project is finished!**
 - Would take too much time to document each limitation of each one of the countries, so I developed tools in the code to detect how many countries didn't have a proper GDP table and to retrieve the data from the ones that had, even if they don't have some years.
