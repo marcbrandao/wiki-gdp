@@ -36,6 +36,22 @@
         # https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)
         # https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP) (alternative - non-optimal - full of non-country items such as territories, continents, etc).
 
+
+
+
+
+UPDATE 29/Jan:
+
+Project is finished!
+- Would take too much time to document each limitation of each one of the countries, so I developed tools in the code to detect how many countries didn't have a proper GDP table and to retrieve the data from the ones that had, even if they don't have some years.
+- Countries that didn't have information beyond 2017 (e.g.), 2018> values will appear as NaN.
+- Interactive way to show the tables
+- Developed in a Jupyter Notebook. To be tested in VS or PyCharm, however, should work perfectly in Jupyter.
+- Launches profile from MLX and performs the activities, generating the outputs and display options after manual gathering.
+- No use of automatic HTML scraping.
+
+
+
         # Additional data (US$Nom): https://en.wikipedia.org/wiki/List_of_countries_by_past_and_projected_GDP_(nominal)
         # Additional data (US$PPP): https://en.wikipedia.org/wiki/List_of_countries_by_past_and_projected_GDP_(PPP)
 
