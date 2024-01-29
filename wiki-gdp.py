@@ -23,7 +23,7 @@ HEADERS = {
 
 # TODO: Insert your account information in both variables below.
 USERNAME = input("Insert your MLX email: ")
-PASSWORD = input("Insert your MLX password: ")
+PASSWORD = getpass("Insert your MLX password: ")
 
 # TODO: Insert the Folder ID and the Profile ID below
 FOLDER_ID = input("Insert the desired folder ID: ")
