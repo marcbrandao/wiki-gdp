@@ -27,7 +27,7 @@ PASSWORD = getpass("Insert your MLX password: ")
 
 # TODO: Insert the Folder ID and the Profile ID below
 FOLDER_ID = input("Insert the desired folder ID: ")
-PROFILE_ID = getpass("Insert the desired profile ID: ")
+PROFILE_ID = input("Insert the desired profile ID: ")
 
 
 # Function to sign into the application and get the token
