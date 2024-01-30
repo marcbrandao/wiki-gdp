@@ -125,8 +125,8 @@ for country_name, url in country_urls:
             header_cells = table.find_elements(By.TAG_NAME, 'th')
 
             # Check if any header cell contains 'US$PPP' or 'US$ PPP' but not 'per capita' or 'growth'. 
-            if any(('GDP' in cell.text) and ('US$' in cell.text or
-                                             'US$PPP' in cell.text or
+            if any(('GDP' in cell.text) and ('US$'        in cell.text or
+                                             'US$PPP'     in cell.text or
                                              'US$nominal' in cell.text) for cell in header_cells):
 
                 # If it detects a table has those text in the headers, it found the GDP table!
@@ -137,13 +137,13 @@ for country_name, url in country_urls:
 
                 # Find the index number of the column that contains 'US$PPP' or 'US$ PPP'
                 gdp_col_index = next((i for i, cell in enumerate(header_cells) if ('US$ PPP' in cell.text or
-                                                                                   'US$PPP' in cell.text or
-                                                                                   'PPP' in cell.text)
-                                      and ('capita' not in cell.text or
-                                           'growth' not in cell.text)
+                                                                                   'US$PPP'  in cell.text or
+                                                                                   'PPP'     in cell.text)
+                                                                               and ('capita' not in cell.text or
+                                                                                    'growth' not in cell.text)
                                       ), None)  # If it doesn't find a column like this, gdp_col_index = None
 
-                # In case you find the index number:
+                # In case it finds the index number:
                 if gdp_col_index is not None:
 
                     for row in rows[1:]:  # Skip the header row
@@ -227,7 +227,11 @@ if get_ipython() is not None and 'IPKernelApp' in get_ipython().config:
 else:
     # Running outside Jupyter notebook, use tabulate
     from tabulate import tabulate
-    print_func = lambda x: print(tabulate(x, headers='keys', tablefmt='simple', floatfmt=".1f", colalign=('center',) + ('right',) * (len('keys') - 1)))
+    print_func = lambda x: print(tabulate(x, 
+                                          headers='keys', 
+                                          tablefmt='simple', 
+                                          floatfmt=".1f", 
+                                          colalign=('center',) + ('right',) * (len('keys') - 1)))
     print("Running outside Jupyter notebook.")
 
 # Get user input regarding which table they want to see
