@@ -139,8 +139,8 @@ for country_name, url in country_urls:
                 gdp_col_index = next((i for i, cell in enumerate(header_cells) if ('US$ PPP' in cell.text or
                                                                                    'US$PPP'  in cell.text or
                                                                                    'PPP'     in cell.text)
-                                                                               and ('capita' not in cell.text or
-                                                                                    'growth' not in cell.text)
+                                                                                   and ('capita' not in cell.text or
+                                                                                        'growth' not in cell.text)
                                       ), None)  # If it doesn't find a column like this, gdp_col_index = None
 
                 # In case it finds the index number:
